@@ -11,9 +11,7 @@
 # - Fetcher parameters are also included in the URL.
 # - This only pulls what is downloaded not necessarily what is packaged with an image. You can
 #   run the following command to pull the image's package:
-#       bitbake -g <image> && cat pn-depends.dot | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk ###################################################################################################
-'{print $1}' | sort | uniq
-#
+#       bitbake -g <image> && cat pn-depends.dot | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk ####################################################################################################
 
 python do_print_src () {
         uri = d.getVar('SRC_URI', True).split()
