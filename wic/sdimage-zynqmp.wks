@@ -1,0 +1,6 @@
+# short-description: Create SD card image.
+# long-description: Create SD card image with vfat boot partition and ext4 rootfs partition.
+
+part /boot --source bootimg-partition --ondisk mmcblk0 --fstype=vfat --label boot --active --align 4 --size 128
+part / --source rootfs --ondisk mmcblk0 --fstype=ext4 --label root --align 4
+
